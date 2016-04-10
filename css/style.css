@@ -3,8 +3,11 @@ body {
   padding: 0;
   font-family: Quicksand, sans-serif;
   font-weight: 400;
-  box-sizing: border-box;
   color: rgb(51,51,51);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 /*
@@ -24,8 +27,7 @@ body {
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 .col-2 {
 	width: 16.6666666%;
@@ -51,8 +53,13 @@ body {
 .col-12 {
 	width: 100%;
 }
+/* if there's more than one column in the grid, add padding in between*/
 [class*="col-"] {
-  padding:0.5em;
+  padding-right: 1em;
+  height: 100%;
+}
+[class*="col-"]:last-of-type {
+  padding-right: 0;
 }
 
 /**
@@ -119,9 +126,9 @@ header .logo {
 .project {
   display: flex;
   flex-direction: column;
+  justify-content:flex-start;
   align-items:center;
   padding: 1em 0;
-  margin: auto;
 }
 
 .project-desc {
@@ -153,27 +160,18 @@ header .logo {
 @media screen and (max-width:600px){
   /* Header */
   header {
-    /*make text smaller for small screens*/
+    /*make header text smaller for small screens*/
     font-size: 0.6em;
   }
 
-  /* featured projects */
+  /* un-grid everything at < 600px */ 
+  [class*="col-"] {
+    width: 100%;
+  }
 
-  /*center title*/
+  /* featured projects */
   .featured-title {
     text-align: center;
-  }
-
-  /* responsive framework */
-  [class*="col-"] {
-    width:66%;
-  }
-
-}
-
-@media screen and (max-width:960px){
-  .site-container {
-    width: 100%;
   }
 
 }
