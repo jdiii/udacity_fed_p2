@@ -12,11 +12,11 @@
 
     <div class="site-container">
 
-      <header>
+      <header class="row">
 
         <h1 id="logo">&#9733;</h1>
 
-        <div id="name">
+        <div class="name">
 
           <span class=title>John Davey</span>
           <span class=subtitle>Front-end ninja</span>
@@ -26,24 +26,24 @@
       </header>
 
 
-      <section id="hero-image">
+      <section class="row hero-image">
         <picture>
           <source srcset="images/hero_puppies_600.jpg 600w" media="(max-width:600px)">
           <source srcset="images/hero_puppies.jpg 1440w" media="(min-width:601px)">
-          <img src="images/hero_puppies.jpg" alt="3 Hero Puppies">
+          <img class="col-12" src="images/hero_puppies.jpg" alt="3 Hero Puppies">
         </picture>
       </section>
 
 
-      <section id="featured">
+      <section class="featured">
 
         <div class="featured-title">Featured Work</div>
 
-        <div class="featured-projects">
+        <div class="row featured-projects">
 
-          <div class="project">
+          <div class="project col-4">
 
-            <img class="project-img" src="images/puppy1.jpg" width=300 alt="The first kitten">
+            <img class="project-img" src="images/puppy1.jpg" alt="The first kitten">
 
             <div class="project-desc">
               <h1>Appify</h1>
@@ -52,9 +52,9 @@
 
           </div>
 
-          <div class="project">
+          <div class="project col-4">
 
-            <img class="project-img" src="images/puppy2.jpg" width=300 alt="The first kitten">
+            <img class="project-img" src="images/puppy2.jpg" alt="The first kitten">
 
             <div class="project-desc">
               <h1>Sunflower</h1>
@@ -64,9 +64,9 @@
           </div>
 
 
-          <div class="project">
+          <div class="project col-4">
 
-            <img class="project-img" src="images/puppy3.jpg" width=300 alt="The first kitten">
+            <img class="project-img" src="images/puppy3.jpg" alt="The first kitten">
 
             <div class="project-desc">
               <h1>Bokeh</h1>
@@ -74,6 +74,8 @@
             </div>
 
           </div>
+
+        </div>
 
 
       </section>
